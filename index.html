@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<form action="./upload.php" method="post" enctype="multipart/form-data">
+  Select image to upload:
+  <input type="file" name="fileToUpload" id="fileToUpload">
+  <input type="submit" value="Upload Image" name="submit">
+</form>
+<b>Gimeo Vid</b></br>
+<input type="file" id="VideoINP" onchange="ConvertFileToHT()" ></input>
+
+
+
+
+<div id="VideoShow"></div>
+<!-- DomApiArrayLoader -->
+
+
+<!-- <main> -->
+	<input type="range" class="win10-thumb" />
+	<!-- <input type="range" class="win10-thumb" min="0" max="100" value="25" step="5" /> -->
+	<!-- <input type="range" class="win10-thumb" disabled value="64" /> -->
+	<!-- <input type="range" /> -->
+	<!-- <input type="range" min="0" max="100" value="40" step="5" /> -->
+	<!-- <input type="range" disabled value="80" /> -->
+<!-- </main> -->
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+<!-- <script src="C:\TUDO\GAMES - GE\TODOS OS PROJETOS\PrintScreenSaver\PrintScreenSaver - Scripts and Programs\DomApi_FixedVersion.js"></script> -->
+<!-- <script src="C:\TUDO\GAMES - GE\TODOS OS PROJETOS\PrintScreenSaver\GIMEO.js"></script> -->
+<script type="text/javascript" src="./DomApi_GimeoIntegration.js" ></script>
+<script>
+
+var xhttp = new XMLHttpRequest();
+xhttp.onreadystatechange = function() {
+    if (this.readyState == 4 && this.status == 200) {
+       // Typical action to be performed when the document is ready:
+       document.getElementById("demo").innerHTML = xhttp.responseText;
+    }
+};
+xhttp.open("GET", "https://drive.google.com/file/d/1PUQLJFUTHS1Z3K8_KqOSwL_iNPi6lkVT/view?usp=sharing", true);
+xhttp.send();
+
+
+GimeoCurrentFilesList="VideoShow"
+
+function ConvertFileToHT(){
+var file = document.getElementById("VideoINP").files[0]
+console.log(file)
+<!-- var FileHT = new Blob([file],{type:"video/mp4"}) -->
+<!-- var ff = URL.createObjectURL(FileHT); -->
+GIMEO.NewVideoAt(file,"VideoShow")
+
+}
+
+vid_name ="test video";
+
+
+
+</script>
+<style>
+#VideoShow{
+width:100%;
+height:100%;
+position:absolute;
+border:1px solid black;
+overflow:auto;
+}
+
+
+
+
+
+
+
+</style>
+</html>

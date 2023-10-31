@@ -1,0 +1,121 @@
+<!doctype>
+<html>
+
+<head>
+
+
+</head>
+<body>
+
+
+
+<div class="GimeoLogoPanel">
+<span class="PlayAnimate">GIMEO</span>
+<span class="Play"></span>
+<div class="play-button-outer">
+  <div class="play-button"></div>
+</div>
+
+
+</div>
+
+
+
+
+
+</body>
+<style>
+.GimeoLogoPanel{
+background:black;
+border:1px solid black;
+width:400px;
+height:200px;
+overflow:hidden;
+position:absolute;
+left:22%;
+top:40%;
+border-radius:15px;
+}
+.Play{
+position:absolute;
+background:red;
+border-radius:50%;
+top:27%;
+left:38%;
+width:100px;
+height:100px;
+border:1px solid white;
+transition:300ms ease-out;
+box-shadow:0px 0px 20px transparent;
+}
+.PlayAnimate{
+position:absolute;
+background:transparent;
+top:34%;
+left:45%;
+font-size:70px;
+letter-spacing:-46px;
+font-family:georgia;
+color:red;
+transition:300ms ease-out;
+text-shadow:0px 0px 20px red;
+}
+
+.GimeoLogoPanel:hover  > .PlayAnimate{
+letter-spacing:20px;
+left:17%;
+}
+
+.GimeoLogoPanel:hover  > .Play{
+background:transparent;
+border:1px solid transparent;
+left:10%;
+}
+.GimeoLogoPanel:hover >.play-button-outer {
+opacity:0;
+ left:14px;
+}
+
+
+.play-button-outer {
+transition:300ms ease-out;
+  margin: 25% auto;
+  width: 10em;
+  height: 10em;
+  background:none;
+  cursor: pointer;
+  transform:scale(0.50);
+  top:-74px;
+ /* left:125px; */
+left:125px;
+  position:absolute;
+}
+
+.play-button {
+  margin: 0 auto;
+  top: 25%;
+  position: relative;  
+  width: 0;
+  height: 0;
+  border-style: solid;
+  border-width: 2.5em 0 2.5em 5em;
+  border-color: transparent transparent transparent white;
+  opacity: .75; 
+}
+
+
+
+
+
+
+
+
+
+</style>
+
+
+
+
+
+
+</html>
